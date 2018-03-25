@@ -5,10 +5,17 @@ ENV ROOT_VERSION=$ROOT_VERSION
 
 RUN zypper ref && \
     zypper --non-interactive in \
-      wget curl \
-      tar zlib \
-      cmake gcc gcc-c++ \
-      libX11-devel libXext-devel libXft-devel libXpm-devel
+      cmake \
+      curl \
+      gcc \
+      gcc-c++ \
+      libX11-devel \
+      libXext-devel \
+      libXft-devel \
+      libXpm-devel \
+      tar \
+      wget \
+      zlib
 
 RUN wget https://root.cern.ch/download/root_v$ROOT_VERSION.source.tar.gz && \
     tar -xf root_v$ROOT_VERSION.source.tar.gz && \
