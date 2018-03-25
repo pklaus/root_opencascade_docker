@@ -13,6 +13,7 @@ RUN zypper ref && \
       libXext-devel \
       libXft-devel \
       libXpm-devel \
+      readline \
       tar \
       wget \
       zlib
@@ -24,6 +25,3 @@ RUN wget https://root.cern.ch/download/root_v$ROOT_VERSION.source.tar.gz && \
 RUN cd ./root-$ROOT_VERSION/build \
  && cmake .. \
  && cmake --build . -- -j6
-
-RUN zypper --non-interactive in \
-  readline
