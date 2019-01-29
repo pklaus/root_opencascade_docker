@@ -1,0 +1,25 @@
+
+
+
+I found out:
+
+* Use OCC v6.x
+    * compile with VTKv6
+* Use ROOT v6.12.x
+
+
+
+OpenCascade v7.x gives the following compilation error:
+
+In file included from input_line_12:8:
+In file included from /home/pklaus/programming/root_cern_build/include/TOCCToStep.h:22:
+/opt/opencascade7/include/opencascade/STEPCAFControl_Writer.hxx:236:3: error: no template named 'NCollection_Vector'
+  NCollection_Vector<Handle(StepRepr_RepresentationItem)> myGDTAnnotations;
+  ^
+Error: /home/pklaus/programming/root_cern_build/bin/rootcling: compilation failure (/home/pklaus/programming/root_cern_build/lib/libGeoCad8080bfa301_dictUmbrella.h)
+make[2]: *** [geom/geocad/CMakeFiles/G__GeoCad.dir/build.make:72: geom/geocad/G__GeoCad.cxx] Error 1
+make[1]: *** [CMakeFiles/Makefile2:28131: geom/geocad/CMakeFiles/G__GeoCad.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+
+
+
