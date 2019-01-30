@@ -111,6 +111,7 @@ RUN cd ./root-$ROOT_VERSION/build \
  && cmake -Dgeocad=ON .. \
  && cmake --build . -- -j$JOBS
 
-RUN apt-get install vim-nox
+RUN apt-get install --yes --no-install-recommends \
+      vim-nox
 
 WORKDIR /root
