@@ -2,14 +2,15 @@ FROM debian:jessie
 
 ARG JOBS=4
 ENV JOBS=$JOBS
-
 RUN echo "Running the compilation with # of JOBS = $JOBS"
 
-ARG OCC_VERSION=7.2.0
+ARG OCC_VERSION=6.9.1
 ENV OCC_VERSION=$OCC_VERSION
+RUN echo "Compiling with OpenCascade $OCC_VERSION"
 
 ARG ROOT_VERSION=6.12.06
 ENV ROOT_VERSION=$ROOT_VERSION
+RUN echo "Compiling with ROOT $ROOT_VERSION"
 
 RUN apt-get update
 RUN echo "reusing 'apt-get update'" && \
