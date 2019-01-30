@@ -8,7 +8,7 @@ ARG OCC_VERSION=6.9.1
 ENV OCC_VERSION=$OCC_VERSION
 RUN echo "Compiling with OpenCascade $OCC_VERSION"
 
-ARG ROOT_VERSION=6.12.06
+ARG ROOT_VERSION=6.16.00
 ENV ROOT_VERSION=$ROOT_VERSION
 RUN echo "Compiling with ROOT $ROOT_VERSION"
 
@@ -54,8 +54,8 @@ RUN echo "reusing 'apt-get update'" && \
 
 RUN apt-get install --yes --no-install-recommends git-core
 
-# Update CMake to v3.5.1
-RUN git clone --depth 1 -b v3.5.1 https://github.com/Kitware/CMake.git
+# Update CMake to v3.6.3
+RUN git clone --depth 1 -b v3.6.3 https://github.com/Kitware/CMake.git
 RUN \
   cd CMake && \
   mkdir build && \

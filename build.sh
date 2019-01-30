@@ -2,7 +2,7 @@
 
 JOBS=14
 OCC_VERSION=6.9.1
-ROOT_VERSION=6.12.06
+ROOT_VERSION=6.16.00
 
 docker build \
   -t pklaus/root_opencascade:v${ROOT_VERSION}_${OCC_VERSION} \
